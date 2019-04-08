@@ -11,22 +11,33 @@ public:
 	double evaluate(double x);
 
 private:
-	 double a;
-	 double b;
-	 double c;
+	// If the member variables are const
+	// use an initialization list in the construtor
+	const double a;
+	const double b;
+	const double c;
 };
 
 Quadratic::Quadratic(double aa, double bb ,
  double cc):a(aa), b(bb), c(cc) { 
+ // Example of constructor that uses an initialization list
+ // a(aa) is read as a = aa
  //default constructor
 
 }
 
-Quadratic::Quadratic(const Quadratic&
-	                 source){
+Quadratic::Quadratic(const Quadratic& source):
+     a(source.a), b(source.b), c(source.c){
+	// Using an initialization list again
+    // because a, b, c are const
+	/*
+	If the memeber variables where not const,
+	then we could initialize them as shown below:
+
 	a = source.a;
 	b = source.b;
 	c = source.c;
+	*/
 }
 
 Quadratic::~Quadratic(){
