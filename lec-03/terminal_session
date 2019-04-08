@@ -1,0 +1,289 @@
+MacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+MacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+quadratic.cpp:18:12: error: constructor for
+      'Quadratic' must explicitly initialize
+      the const member 'a'
+Quadratic::Quadratic(double aa, double bb ,
+           ^
+quadratic.cpp:13:15: note: declared here
+        const double a;
+                     ^
+quadratic.cpp:18:12: error: constructor for
+      'Quadratic' must explicitly initialize
+      the const member 'b'
+Quadratic::Quadratic(double aa, double bb ,
+           ^
+quadratic.cpp:14:15: note: declared here
+        const double b;
+                     ^
+quadratic.cpp:18:12: error: constructor for
+      'Quadratic' must explicitly initialize
+      the const member 'c'
+Quadratic::Quadratic(double aa, double bb ,
+           ^
+quadratic.cpp:15:15: note: declared here
+        const double c;
+                     ^
+quadratic.cpp:20:4: error: cannot assign to
+      non-static data member 'a' with
+      const-qualified type 'const double'
+        a = aa;
+        ~ ^
+quadratic.cpp:13:15: note: non-static data
+      member 'a' declared const here
+        const double a;
+        ~~~~~~~~~~~~~^
+quadratic.cpp:21:4: error: cannot assign to
+      non-static data member 'b' with
+      const-qualified type 'const double'
+        b = bb;
+        ~ ^
+quadratic.cpp:14:15: note: non-static data
+      member 'b' declared const here
+        const double b;
+        ~~~~~~~~~~~~~^
+quadratic.cpp:22:4: error: cannot assign to
+      non-static data member 'c' with
+      const-qualified type 'const double'
+        c = cc;
+        ~ ^
+quadratic.cpp:15:15: note: non-static data
+      member 'c' declared const here
+        const double c;
+        ~~~~~~~~~~~~~^
+quadratic.cpp:36:13: error: redefinition of
+      'p'
+        Quadratic* p = new Quadratic(...
+                   ^
+quadratic.cpp:35:13: note: previous
+      definition is here
+        Quadratic* p = new Quadratic;
+                   ^
+7 errors generated.
+MacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+quadratic.cpp:36:13: error: redefinition of
+      'p'
+        Quadratic* p = new Quadratic(...
+                   ^
+quadratic.cpp:35:13: note: previous
+      definition is here
+        Quadratic* p = new Quadratic;
+                   ^
+1 error generated.
+MacBook-Pro-33:lec-03 diba$ 
+MacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+quadratic.cpp:36:13: error: redefinition of
+      'p'
+        Quadratic* p = new Quadratic(...
+                   ^
+quadratic.cpp:35:13: note: previous
+      definition is here
+        Quadratic* p = new Quadratic;
+                   ^
+1 error generated.
+MacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+MacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+quadratic.cpp:18:12: error: constructor for
+      'Quadratic' must explicitly initialize
+      the const member 'a'
+Quadratic::Quadratic(double aa, double bb ,
+           ^
+quadratic.cpp:13:15: note: declared here
+        const double a;
+                     ^
+quadratic.cpp:18:12: error: constructor for
+      'Quadratic' must explicitly initialize
+      the const member 'b'
+Quadratic::Quadratic(double aa, double bb ,
+           ^
+quadratic.cpp:14:15: note: declared here
+        const double b;
+                     ^
+quadratic.cpp:18:12: error: constructor for
+      'Quadratic' must explicitly initialize
+      the const member 'c'
+Quadratic::Quadratic(double aa, double bb ,
+           ^
+quadratic.cpp:15:15: note: declared here
+        const double c;
+                     ^
+quadratic.cpp:20:4: error: cannot assign to
+      non-static data member 'a' with
+      const-qualified type 'const double'
+        a = aa;
+        ~ ^
+quadratic.cpp:13:15: note: non-static data
+      member 'a' declared const here
+        const double a;
+        ~~~~~~~~~~~~~^
+quadratic.cpp:21:4: error: cannot assign to
+      non-static data member 'b' with
+      const-qualified type 'const double'
+        b = bb;
+        ~ ^
+quadratic.cpp:14:15: note: non-static data
+      member 'b' declared const here
+        const double b;
+        ~~~~~~~~~~~~~^
+quadratic.cpp:22:4: error: cannot assign to
+      non-static data member 'c' with
+      const-qualified type 'const double'
+        c = cc;
+        ~ ^
+quadratic.cpp:15:15: note: non-static data
+      member 'c' declared const here
+        const double c;
+        ~~~~~~~~~~~~~^
+6 errors generated.
+MacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+quadratic.cpp:13:16: warning: 
+      in-class
+      initialization
+      of non-static
+      data member is
+      a C++11
+      extension
+      [-Wc++11-extensions]
+  ...double a=5;
+             ^
+quadratic.cpp:18:12: error: 
+      constructor
+      for
+      'Quadratic'
+      must
+      explicitly
+      initialize the
+      const member
+      'b'
+Quadratic::Q...
+           ^
+quadratic.cpp:14:15: note: 
+      declared here
+  ...double b;
+            ^
+quadratic.cpp:18:12: error: 
+      constructor
+      for
+      'Quadratic'
+      must
+      explicitly
+      initialize the
+      const member
+      'c'
+Quadratic::Q...
+           ^
+quadratic.cpp:15:15: note: 
+      declared here
+  ...double c;
+            ^
+quadratic.cpp:20:4: error: 
+      cannot assign
+      to non-static
+      data member
+      'a' with
+      const-qualified
+      type 'const
+      double'
+        a = aa;
+        ~ ^
+quadratic.cpp:13:15: note: 
+      non-static
+      data member
+      'a' declared
+      const here
+  ...const double a=5;
+     ~~~~~~~~~~~~~^~~
+quadratic.cpp:21:4: error: 
+      cannot assign
+      to non-static
+      data member
+      'b' with
+      const-qualified
+      type 'const
+      double'
+        b = bb;
+        ~ ^
+quadratic.cpp:14:15: note: 
+      non-static
+      data member
+      'b' declared
+      const here
+  ...const double b;
+     ~~~~~~~~~~~~~^
+quadratic.cpp:22:4: error: 
+      cannot assign
+      to non-static
+      data member
+      'c' with
+      const-qualified
+      type 'const
+      double'
+        c = cc;
+        ~ ^
+quadratic.cpp:15:15: note: 
+      non-static
+      data member
+      'c' declared
+      const here
+  ...const double c;
+     ~~~~~~~~~~~~~^
+1 warning and 5 errors generaMacBook-ProMacBook-Pro-33:lec-0MacBooMaMaMacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+MacBook-Pro-33:lec-03 dibaMacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+quadratic.cpp:9:18: error: 
+      unknown type name
+      'Quadractic'; did
+      you mean
+      'Quadratic'?
+  ...Quadractic& source);
+     ^~~~~~~~~~
+     Quadratic
+quadratic.cpp:5:7: note: 
+      'Quadratic' declared
+      here
+class Quadratic{
+      ^
+quadratic.cpp:25:28: error: 
+      unknown type name
+      'Quadractic'; did
+      you mean
+      'Quadratic'?
+  ...Quadractic& 
+     ^~~~~~~~~~
+     Quadratic
+quadratic.cpp:5:7: note: 
+      'Quadratic' declared
+      here
+class Quadratic{
+      ^
+MacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+quadratic.cpp:25:28: error: 
+      unknown type name
+      'Quadractic'; did you mean
+      'Quadratic'?
+  ...Quadractic& 
+     ^~~~~~~~~~
+     Quadratic
+quadratic.cpp:5:7: note: 
+      'Quadratic' declared here
+class Quadratic{
+      ^
+1 error generated.
+MacBook-Pro-33:lec-03 MacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+MacBook-Pro-33:lec-03 diba$ g++ quadratic.cpp 
+quadratic.cpp:9:28: error: 
+      copy constructor
+      must pass its
+      first argument
+      by reference
+  ...source);
+     ^
+     const &
+quadratic.cpp:26:19: error: 
+      copy constructor
+      must pass its
+      first argument
+      by reference
+  ...source){
+     ^
+     const &
+MacBook-Pro-33:lec-03 diba$ gMacBook-ProMacBMacBook-Pro-33:lec-03 diba$ 
