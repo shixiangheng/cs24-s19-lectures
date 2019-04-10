@@ -8,23 +8,32 @@
 #include "testlinkedlist.h"
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
+int main(){
+	LinkedListTest lltest;
+	lltest.runAll();
+	return 0;
+}
 
-//	void test_constructor();
+void LinkedListTest::runAll(){
+	test_append();
+	test_equal();
+}
+
 void LinkedListTest::test_append(){
-	cout<<"Start test_append"<<endl;
+	START_TEST("test_append") 
 	test_append_0();
 	test_append_1();
-	cout<<"End test_append"<<endl<<endl;
+	END_TEST("test_append")
 
 }
+
 void LinkedListTest::test_equal(){
-	cout<<"Start test_equal"<<endl;
+	START_TEST("test_equal")
 	test_equal_0();
 	//test_equal_1();
-	cout<<"End test_equal"<<endl<<endl;
+	END_TEST("test_equal")
 
 }
 
@@ -41,6 +50,12 @@ void LinkedListTest::test_append_0(){ // A test case for append
 		cout <<" PASSED: "<<testname<<endl;
 	}
 }
+
+void LinkedListTest::test_append_1(){ 
+	// Tests cases should be independent,
+    // small, fast, orthogonal (test for different cases)
+
+}
 void LinkedListTest::test_equal_0(){ 
 	string testname = "case 0: [1], [1]";
 	LinkedList l1, l2;
@@ -54,19 +69,7 @@ void LinkedListTest::test_equal_0(){
 
 }
 
-void LinkedListTest::test_append_1(){ 
-	// Tests cases should be independent,
-    // small, fast, orthogonal (test for different cases)
 
-}
 
-void LinkedListTest::runAll(){
-	test_append();
-	test_equal();
-}
 
-int main(){
-	LinkedListTest lltest;
-	lltest.runAll();
-	return 0;
-}
+

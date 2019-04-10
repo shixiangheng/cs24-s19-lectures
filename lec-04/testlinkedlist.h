@@ -7,7 +7,10 @@
 #ifndef TEST_LINKED_LIST_H
 #define TEST_LINKED_LIST_H
 #include <vector>
+#include <iostream>
+
 using namespace std;
+
 
 class LinkedListTest{
 public:
@@ -31,4 +34,11 @@ private:
 
 
 };
+
+#define START_TEST(TESTNAME) \
+	cout<<"Start "<<TESTNAME<<endl;
+
+#define END_TEST(TESTNAME) \
+	cout<<"End "<<TESTNAME<<endl<<endl;
+
 #endif

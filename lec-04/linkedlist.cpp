@@ -57,10 +57,10 @@ bool LinkedList::operator==(const LinkedList& other){
 
 
 vector<int> LinkedList::vectorize(){
-	vector<int> v;
+	vector<int> v; // v is a dynamic array, initially empty
 	Node* p = head;
 	while(p){
-		v.push_back(p->data);
+		v.push_back(p->data); //append the value p->data to v
 		p = p->next;
 	}
 	return v;
