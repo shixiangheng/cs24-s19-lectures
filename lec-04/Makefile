@@ -3,7 +3,7 @@ all: test
 
 	
 test: linkedlist.cpp testlinkedlist.cpp
-	g++ --std=c++11 linkedlist.cpp testlinkedlist.cpp -o test
+	g++ -std=c++11 linkedlist.cpp testlinkedlist.cpp -o test
 
 
 clean:
