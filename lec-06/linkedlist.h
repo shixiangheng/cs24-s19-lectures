@@ -7,6 +7,7 @@
 #ifndef LINKED_LIST_H
 #define LINKED_LIST_H
 #include <vector>
+#include <iostream>
 using namespace std;
 
 class LinkedList{
@@ -22,6 +23,7 @@ public:
 	void print();
 	vector<int> vectorize();
 	bool operator==(const LinkedList& other);
+	void operator=(const LinkedList& other);
 private:
 	struct Node{
 		Node(int item):data(item), prev(nullptr),next(nullptr){}
@@ -32,4 +34,5 @@ private:
 	Node* head;
 	Node* tail;
 };
+void operator<<(ostream& out, LinkedList& ll);
 #endif

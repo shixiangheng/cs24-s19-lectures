@@ -22,8 +22,23 @@ LinkedList::~LinkedList(){
 	tail = nullptr;
 
 }
+
+void operator<<(ostream& out, LinkedList& ll){
+}
+void LinkedList::operator=(const LinkedList& other){
+   //default implementation
+   head = other.head;
+   tail = other.tail;
+    /*head = nullptr;
+    tail = nullptr;
+	Node* p = other.head;
+	while(p){
+		this->append(p->data);
+		p = p->next;
+	}*/
+}
 LinkedList::LinkedList(const LinkedList& source)
-//	:head(nullptr), tail(nullptr)
+	:head(nullptr), tail(nullptr)
 {
 	/*
 	 * Default copy constructor executes this code

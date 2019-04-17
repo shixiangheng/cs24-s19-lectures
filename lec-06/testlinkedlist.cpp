@@ -12,6 +12,11 @@ using namespace std;
 
 int main(){
 	runAll();
+	LinkedList ll;
+	ll.append(1);
+	ll.append(2);
+	ll.print();
+	cout<<ll;// operator<<(cout, ll);
 	return 0;
 }
 
@@ -19,8 +24,16 @@ void runAll(){
 	test_append();
 	test_equal();
 	test_copy_constructor();
+	test_copy_assignment();
 }
 
+void test_copy_assignment(){
+	LinkedList l1;
+	l1.append(1);
+	LinkedList l2;
+	l2.append(3);
+	l2 = l1;
+}
 void test_append(){
 	START_TEST("test_append");
 	test_append_0();

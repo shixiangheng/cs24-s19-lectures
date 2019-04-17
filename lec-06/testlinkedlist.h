@@ -15,6 +15,7 @@ using namespace std;
 void runAll();
 void test_constructor();
 void test_copy_constructor();
+void test_copy_assignment();
 void test_append();
 void test_equal();
 /*
