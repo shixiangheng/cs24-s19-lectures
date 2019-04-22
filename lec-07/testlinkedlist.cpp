@@ -24,9 +24,7 @@ void runAll(){
 	test_append();
 	test_equal();
 	test_copy_constructor();
-//	test_copy_assignment(); 
-//  This test segfaults because the implementation of operator= is incorrect (mimicks the default implementation of this
-//operator. In class we discussed why this leads to a segfault and needs to be overloaded.
+//	test_copy_assignment();
 }
 
 void test_copy_assignment(){
