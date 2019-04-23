@@ -15,9 +15,21 @@ bool searchArray(int arr[], int element, int N){
 }
 
 
+bool binarySearchHelper(int arr[], int element, int lo, int hi){
+	if(lo> hi)
+		return false; //empty array
+	int mid = (lo+hi)/2;
+    if(arr[mid] == element)
+		return true;
+	if(arr[mid] > element)
+	    return binarySearchHelper(arr, element, lo,mid-1);
+	return binarySearchHelper(arr, element, mid+1,hi);
+
+}
+
 bool binarySearch(int arr[], int element, int N){
 //Precondition: input array arr is sorted in ascending order
-	return false;
+	return binarySearchHelper(arr, element, 0, N-1);
 }
 
 

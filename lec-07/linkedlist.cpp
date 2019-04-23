@@ -10,6 +10,18 @@
 #include "linkedlist.h"
 using namespace std;
 
+
+int LinkedList::sum(){
+	return sum(head);
+}
+
+int LinkedList::sum(Node* curr){
+	// base case, simplest case you don't need recursion
+	if(curr == nullptr)
+		return 0;
+    return curr->data +  sum(curr->next);
+}
+
 LinkedList::~LinkedList(){
 	Node* p = head;
 	Node* tmp;
@@ -79,8 +91,27 @@ int LinkedList::max(){
 	return 42;
 }
 
-void LinkedList::print(){
+void LinkedList::printHelper(Node* curr){// should be private
+	if(!curr)
+		return;
+	cout<<curr->data;
+	printHelper(curr->next);
 
+}
+void LinkedList::clearHelper(Node* p){
+	if(!p)
+		return;
+	clearHelper(p->next);
+	delete p;
+}
+//public
+void LinkedList::clear(){
+	clearHelper(head);
+	head = nullptr;
+	tail = nullptr;
+}
+void LinkedList::print(){
+	printHelper(head);
 }
 
 bool LinkedList::operator==(const LinkedList& other){

@@ -21,6 +21,8 @@ public:
 	int min();
 	int max();
 	void print();
+	int sum();
+    void clear();
 	vector<int> vectorize();
 	bool operator==(const LinkedList& other);
 	void operator=(const LinkedList& other);
@@ -33,6 +35,10 @@ private:
 	};
 	Node* head;
 	Node* tail;
+	//Recursive helper functions
+	int sum(Node*);
+    void clearHelper(Node*);
+	void printHelper(Node*);
 };
 void operator<<(ostream& out, LinkedList& ll);
 #endif
