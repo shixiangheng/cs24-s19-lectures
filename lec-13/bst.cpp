@@ -7,6 +7,10 @@ using std::cout;
 
 // constructor sets up empty tree
 
+void foo(int i){
+	cout<<i;
+}
+
 template< class T>
 BST<T>::BST() : root(0) { }
 
@@ -87,7 +91,7 @@ void BST<T>::printPreOrder(Node *n) const {
 
 
 template< class T>
-BST<T>::Node* BST<T>::getNodeFor(int value, Node* n) const{
+typename BST<T>::Node* BST<T>::getNodeFor(T value, Node* n) const{
     return NULL; // REPLACE THIS NON-SOLUTION
 } 
 
